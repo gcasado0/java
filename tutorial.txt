@@ -29,4 +29,54 @@ System.out.println("a.x = " + a.x); 2
 System.out.println("b.x = " + b.x); 2
 System.out.println("IdentifyMyParts.x = " + IdentifyMyParts.x); 2
 
+-------------------------------------------------------------------------
+1.What's wrong with the following program?
 
+public class SomethingIsWrong {
+    public static void main(String[] args) {
+        Rectangle myRect;
+        myRect.width = 40;
+        myRect.height = 50;
+        System.out.println("myRect's area is " + myRect.area());
+    }
+}
+Rta: nunca crea un objeto myRect con el metodo new.
+
+
+2.The following code creates one array and one string object. 
+
+...
+String[] students = new String[10]; //1 referencia
+String studentName = "Peter Parker"; //1 referencia
+students[0] = studentName; //1 referencia
+studentName = null; //se elimino una referencia
+...
+How many references to those objects exist after the code executes? 
+Rta: 2
+students --> array of strings object
+students[0] --> string object
+
+Is either object eligible for garbage collection? 
+Rta: no porque ambos tienen una referencia 
+
+
+3. How does a program destroy an object that it creates?
+Rta: assing a null to the reference
+
+4. Fix the program called SomethingIsWrong shown in Question 1.
+
+public class SomethingIsWrong {
+    public static void main(String[] args) {
+        Rectangle myRect = new Rectangle();
+        myRect.width = 40;
+        myRect.height = 50;
+        System.out.println("myRect's area is " + myRect.area());
+    }
+}
+
+Given the following class, called NumberHolder, write some code that creates an instance of the class, initializes its two member variables, and then displays the value of each member variable.
+
+public class NumberHolder {
+    public int anInt;
+    public float aFloat;
+}
