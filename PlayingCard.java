@@ -13,7 +13,8 @@ public class PlayingCard {
     }
 
     public void showState() {
-       System.out.println(suit+":"+rank);
+       //System.out.println(suit+":"+rank);
+       System.out.format("%s of %s%n",rank,suit);
     }
 }
 
