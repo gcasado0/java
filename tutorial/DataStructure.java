@@ -87,5 +87,6 @@ public class DataStructure {
         // values of even indices
         DataStructure ds = new DataStructure();
         ds.printEven();
+        
     }
 }
