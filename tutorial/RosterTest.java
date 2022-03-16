@@ -60,8 +60,7 @@ public class RosterTest {
 
     // Approach 2: Create More Generalized Search Methods
 
-    public static void printPersonsWithinAgeRange(
-        List<Person> roster, int low, int high) {
+    public static void printPersonsWithinAgeRange(List<Person> roster, int low, int high) {
         for (Person p : roster) {
             if (low <= p.getAge() && p.getAge() < high) {
                 p.printPerson();
