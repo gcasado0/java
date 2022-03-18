@@ -197,9 +197,9 @@ public class RosterTest {
 
         printPersons(
             roster,
-            (Person p) -> p.getGender() == Person.Sex.MALE
+             p -> p.getGender() == Person.Sex.MALE
                 && p.getAge() >= 18
-                && p.getAge() <= 25
+                && p.getAge() <= 31
         );
 
         System.out.println();
