@@ -64,7 +64,7 @@ public class Person {
     }
 
     public void printPerson() {
-      System.out.println(name + ", " + this.getAge());
+      System.out.println(name + ", " + this.getBirthday());
     }
     
     public Sex getGender() {
@@ -92,20 +92,20 @@ public class Person {
         List<Person> roster = new ArrayList<>();
         roster.add(
             new Person(
-            "Fred",
-            IsoChronology.INSTANCE.date(1980, 6, 20),
-            Person.Sex.MALE,
-            "fred@example.com"));
+            "George",
+            IsoChronology.INSTANCE.date(1991, 8, 13),
+            Person.Sex.MALE, "george@example.com"));
         roster.add(
             new Person(
             "Jane",
             IsoChronology.INSTANCE.date(1990, 7, 15),
-            Person.Sex.FEMALE, "jane@example.com"));
+            Person.Sex.FEMALE, "jane@example.com"));        
         roster.add(
             new Person(
-            "George",
-            IsoChronology.INSTANCE.date(1991, 8, 13),
-            Person.Sex.MALE, "george@example.com"));
+            "Fred",
+            IsoChronology.INSTANCE.date(1980, 6, 20),
+            Person.Sex.MALE,
+            "fred@example.com"));
         roster.add(
             new Person(
             "Bob",
