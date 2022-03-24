@@ -1,20 +1,15 @@
 public class PlayingCard {
-    public String rank; //(1-Ace,2,3,4,5,6,7,8,9,10,Jack,Queen,King)
-    public String suit; //0-clubs (♣), 1-diamonds (♦), 2-hearts (♥), and 3-spades (♠)
+    private final Rank rank;
+    private final Suit suit;
 
-
-    PlayingCard(){
-        this("","");
-    }
-
-    PlayingCard(String r, String s){
+    PlayingCard(Rank r, Suit s){
         rank = r;
         suit = s;
     }
 
     public void showState() {
        //System.out.println(suit+":"+rank);
-       System.out.format("%s of %s%n",rank,suit);
+       System.out.format("%s of %s%n", rank, suit);
     }
 }
 
