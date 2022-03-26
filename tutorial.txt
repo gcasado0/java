@@ -135,5 +135,35 @@ print elements that have an even index value and elements that have an odd index
     ds.print(DataStructure::isEvenIndex);
     ds.print(DataStructure::isOddIndex);
 
+//-------------------------------------------------------------------------------------------------
 
+Questions and Exercises: Annotations
+Questions
+What is wrong with the following interface?
 
+public interface House {
+    @Deprecated  
+    void open();--> define un metodo que esta deprecado
+    void openFrontDoor();
+    void openBackDoor();
+}
+
+Consider this implementation of the House interface, shown in Question 1.
+
+public class MyHouse implements House {
+    public void open() {}
+    public void openFrontDoor() {}
+    public void openBackDoor() {}
+}
+If you compile this program, the compiler produces a warning because open was deprecated (in the interface). 
+What can you do to get rid of that warning?
+se puede usar esta anotacion: @SuppressWarnings("deprecation")
+
+Will the following code compile without error? Why or why not?
+
+public @interface Meal { ... }
+
+@Meal("breakfast", mainDish="cereal")
+@Meal("lunch", mainDish="pizza")
+@Meal("dinner", mainDish="salad")
+public void evaluateDiet() { ... }
