@@ -1,6 +1,6 @@
 public class MyString implements java.lang.CharSequence {
 
-    private String x = new String();
+    private String x;
 
     public MyString(String a){
         x = a;
@@ -12,12 +12,12 @@ public class MyString implements java.lang.CharSequence {
     }
 
     @Override
-    public int length() {        
+    public int length() {
         return x.length();
     }
 
     @Override
-    public CharSequence subSequence(int arg0, int arg1) { 
+    public CharSequence subSequence(int arg0, int arg1) {
         return x.subSequence(arg0, arg1);
     }
     
@@ -32,8 +32,12 @@ public class MyString implements java.lang.CharSequence {
     }
 
     public static void main(String[] args) {
+
         MyString test = new MyString("Esto es una prueba");
-        System.out.println(test.toString());
+        System.out.println(test.charAt(0)); //E
+        System.out.println(test.length()); //18
+        System.out.println(test.subSequence(3,6)); //o e
+        System.out.println(test.toString()); //al reves
     }
 
 }

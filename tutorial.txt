@@ -198,6 +198,7 @@ rta:
     public interface Marker {
     }
 rta: creo que no, porque no tiene ningun metodo
+correcion: si es correcta
 
 
 Exercises
@@ -206,3 +207,11 @@ found in the java.lang package.
 Your implementation should return the string backwards. 
 Select one of the sentences from this book to use as the data. 
 Write a small main method to test your class; make sure to call all four methods.
+
+2. Suppose you have written a time server that periodically notifies its clients 
+of the current date and time. Write an interface the server could use to enforce 
+a particular protocol on its clients.
+
+Ver TimeServer.java
+    
+}
